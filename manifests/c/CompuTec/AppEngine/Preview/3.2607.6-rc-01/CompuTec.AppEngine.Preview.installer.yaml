@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+
+PackageIdentifier: CompuTec.AppEngine.Preview
+PackageVersion: 3.2607.6-rc-01
+Platform:
+- Windows.Desktop
+MinimumOSVersion: 10.0.0.0
+InstallerType: msi
+Scope: machine
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+Dependencies:
+  PackageDependencies:
+  - PackageIdentifier: Microsoft.DotNet.Runtime.8
+    MinimumVersion: 8.0.30
+  - PackageIdentifier: Microsoft.DotNet.AspNetCore.8
+    MinimumVersion: 8.0.30
+ElevationRequirement: elevationRequired
+UpgradeBehavior: install
+ReleaseDate: 2026-07-24
+Installers:
+- Architecture: x64
+  InstallerUrl: https://download.computec.one/software/appengine/releases/CompuTec.AppEngine.3.2607.6-rc-01.msi
+  InstallerSha256: E2B7A6D5815C13B25C601B312E6CBB8045BF50D61A52618C03786A297D27505E
+  ProductCode: '{C6499510-7FDA-48C2-BB13-DB6A61B68DEC}'
+  AppsAndFeaturesEntries:
+  - DisplayName: CompuTec AppEngine
+    DisplayVersion: 3.2607.6.2001
+    ProductCode: '{C6499510-7FDA-48C2-BB13-DB6A61B68DEC}'
+    UpgradeCode: '{63BC9CAA-01FD-4C89-AFD6-A26EAC42AAD6}'
+    InstallerType: msi
+ManifestType: installer
+ManifestVersion: 1.12.0
